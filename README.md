@@ -38,10 +38,15 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on my code of conduct
 ## Versioning
 
 I use a versioning system similar [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/OliverKind/OLKI.Programme.FDA/tags). 
-a.b.c.d
+
+Versionnumber: a.b.c.d 
+
 a = major release (big changes)
+
 b = minor release (functional enhancement)
-c = patch level ()
+
+c = patch level
+
 d = build number
 
 ## Authors
