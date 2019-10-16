@@ -12,5 +12,10 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - N/A
 
+## [1.0.1.2] - 2019-10-16
+### Fixed
+- Wrong text at LGPL-Licence file
+- Fixed wrong application title at EULA-File
+
 ## [1.0.0.1] - 2018-12-28
 ### Initial release
