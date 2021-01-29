@@ -34,7 +34,7 @@
 
   ;Name and file
   Name ${AppName}
-  OutFile "${AppName}__v${Version}__Setup.exe"
+  OutFile "../../${AppName}__v${Version}__Setup.exe"
 
   ;Default installation folder
   InstallDir "$PROGRAMFILES\${Company}\${AppName}\"
