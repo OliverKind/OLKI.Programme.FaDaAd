@@ -1,7 +1,7 @@
-'FDA - 1.0.0.1' - FastDateAdjust
+'FaDaAd - 1.0.0.1' - FastDateAdjust
 ************************************
 
-Copyright © 2017 OLKI - Oliver Kind
+Copyright © 2021 OLKI - Oliver Kind
 Alle Rechte vorbehalten.
 
 
@@ -40,7 +40,7 @@ Das Recht der Vermarktung fällt somit exklusiv dem Autor der Software zu.
 1 - Systemvoraussetzungen
 *************************
 
-Damit die Software 'FDA - FastDateAdjust' einwandfrei läuft, muss
+Damit die Software 'FaDaAd - FastDateAdjust' einwandfrei läuft, muss
 das Computersystem folgende Voraussetzungen erfüllen:
 
 - Prozessor 1 GHz
@@ -66,7 +66,7 @@ Betriebssystem Unterschiede auftreten.
 **************************************************
 
 Stellen Sie sicher, dass folgende Voraussetzungen erfüllt sind,
-damit 'FDA - FastDateAdjust' einwandfrei auf Ihrem Computer funktioniert:
+damit 'FaDaAd - FastDateAdjust' einwandfrei auf Ihrem Computer funktioniert:
 
 - Systemvoraussetzungen erfüllt
 - unter Umständen müssen Administrator-Rechte vorhanden sein
@@ -79,25 +79,25 @@ damit 'FDA - FastDateAdjust' einwandfrei auf Ihrem Computer funktioniert:
 
 a) Erstinstallation
 -------------------
-Wird die Software "FDA - FastDateAdjust" das erste mal, oder nach einer Deinstallation,
+Wird die Software "FaDaAd - FastDateAdjust" das erste mal, oder nach einer Deinstallation,
 installiert, so wird ein Verzeichnis angelegt in dem die  Benutzereinstellungen gespeichert werden.
 Der Pfad zu diesem Verzeichnis ist üblicherweise (Bei Windows 7 oder späteren Versionen):
-"C:\Users\[BENUTZERNAME]\AppData\Roaming\OLKI-Software\QBC"
+"C:\Users\[BENUTZERNAME]\AppData\Roaming\OLKI-Software\FaDaAd"
 
 Die Installation erfolgt für den zum Zeitpunkt der Installation angemeldeten Benutzer.
 Weitere Informationen zu diesem Verzeichnis und den enthaltenen Dateien finden Sie in der Datei Readme.Txt
 
 b) Wiederholinstallation
 ------------------------
-Wird die Software "FDA - FastDateAdjust" installiert, ohne das vorher eine Deinstallation,
+Wird die Software "FaDaAd - FastDateAdjust" installiert, ohne das vorher eine Deinstallation,
 stattgefunden hat bleiben die Dateien im Einstellungsverzeichnis üblicherweise (Bei Windows 7 oder späteren
-Versionen) "C:\Users\[BENUTZERNAME]\AppData\Roaming\OLKI-Software\QBC" unbeeinflusst.
+Versionen) "C:\Users\[BENUTZERNAME]\AppData\Roaming\OLKI-Software\FaDaAd" unbeeinflusst.
 Sollte es erwünscht sein das Diese Dateien neu erzeugt werden so müssen sie zuvor vom Benutzer gelöscht
 werden oder das Programm deinstalliert werden.
 
 c) Start
 ------------
-Beim Start der Software "FDA - FastDateAdjust" kann überprüft werden ob die Software mit Administratorrechten
+Beim Start der Software "FaDaAd - FastDateAdjust" kann überprüft werden ob die Software mit Administratorrechten
 gestartet wurde. Dies kann hilfreich sein wenn das Datum von Dateien aufgrund zu Zugriffsverweigerungen
 nicht geändert werden kann.
 

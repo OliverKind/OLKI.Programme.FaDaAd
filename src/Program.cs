@@ -1,24 +1,31 @@
 ﻿/*
- * Filename:      Program.cs
- * Created:       2018-12-24
- * Last modified: 2018-12-24
- * Copyright:     Oliver Kind - 2018
+ * FaDaAd - FastDateAdjust
  * 
- * File Content:
- * - Methodes
- *  1. Main - Application entry point
+ * Copyright:   Oliver Kind - 2021
+ * License:     LGPL
  * 
  * Desctiption:
  * Root object of the application
  * 
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the LGPL General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * LGPL General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not check the GitHub-Repository.
+ * 
  * */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
-namespace OLKI.Programme.FDA
+namespace OLKI.Programme.FaDaAd.src
 {
     /// <summary>
     /// Root object of the application
@@ -48,7 +55,7 @@ namespace OLKI.Programme.FDA
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Save settings directory to registry
-            FDA.AboutForm AboutForm = new FDA.AboutForm();
+            AboutForm AboutForm = new AboutForm();
             string RegistryPath = string.Empty;
 
             System.Configuration.Configuration Config = System.Configuration.ConfigurationManager.OpenExeConfiguration(System.Configuration.ConfigurationUserLevel.PerUserRoaming);
@@ -66,11 +73,11 @@ namespace OLKI.Programme.FDA
             Microsoft.Win32.Registry.SetValue(RegistryPath, REGISTRY_SETTINGS_DIRECTORY_KEY, ConigFilePathRootDir);
 
             // Upgrade Settings
-            if (!FDA.Properties.Settings.Default.SettingsUpgradet)
+            if (!FaDaAd.Properties.Settings.Default.SettingsUpgradet)
             {
-                FDA.Properties.Settings.Default.Upgrade();
-                FDA.Properties.Settings.Default.SettingsUpgradet = true;
-                FDA.Properties.Settings.Default.Save();
+                FaDaAd.Properties.Settings.Default.Upgrade();
+                FaDaAd.Properties.Settings.Default.SettingsUpgradet = true;
+                FaDaAd.Properties.Settings.Default.Save();
             }
 
             // Show MainForm

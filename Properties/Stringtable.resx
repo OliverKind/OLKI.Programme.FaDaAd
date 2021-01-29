@@ -117,25 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnBatchStart_Click_Exception_Caption" xml:space="preserve">
+  <data name="0x0001c" xml:space="preserve">
     <value>Stapelverarbeitung</value>
   </data>
-  <data name="btnBatchStart_Click_Exception_Message" xml:space="preserve">
+  <data name="0x0001m" xml:space="preserve">
     <value>Wärend der Stapelverarbeitung ist ein Fehler aufgetreten. Es konnte einige oder alle Dateien nicht bearbeitet werden.
 
 Fehler:
 {0}</value>
   </data>
-  <data name="btnCheckForAdminRights_Click__IsAdmin_Caption" xml:space="preserve">
+  <data name="0x0002c" xml:space="preserve">
     <value>Ausführung als Administrator</value>
   </data>
-  <data name="btnCheckForAdminRights_Click__IsAdmin_Message" xml:space="preserve">
+  <data name="0x0002m" xml:space="preserve">
     <value>Sie führen dieses Programm als Administrator aus.</value>
   </data>
-  <data name="btnCheckForAdminRights_Click__IsNotAdmin_Caption" xml:space="preserve">
+  <data name="0x0003c" xml:space="preserve">
     <value>Bitte als Administrator auführen</value>
   </data>
-  <data name="btnCheckForAdminRights_Click__IsNotAdmin_Message" xml:space="preserve">
+  <data name="0x0003m" xml:space="preserve">
     <value>Sie sollten die Anwendung als Administrator ausführen um Fehler aufgrund verweigerter Zugriffsrechte zu vermeiden.</value>
   </data>
 </root>

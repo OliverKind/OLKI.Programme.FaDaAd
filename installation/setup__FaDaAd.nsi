@@ -1,4 +1,4 @@
-;NSIS Installer for FDA 1.0.1.2
+;NSIS Installer for FaDaAd 1.0.2.3
 ;Using Modern Interface, Setup-Options, etc.
 ;Written by Oliver Kind
 
@@ -20,12 +20,12 @@
 ;--------------------------------
 ;Defining
 
-  !define AppName          'FDA'
-  !define Version          '1.0.1.2'
+  !define AppName          'FaDaAd'
+  !define Version          '1.0.2.3'
   !define Company          'OLKI-Software'
   !define Comments         'Ein Programm um falsche Zeitstempel von Dateien zu korrigieren'
   !define Copyright        '2018 - Oliver Kind'
-  !define FinishFile       'FDA.exe'
+  !define FinishFile       'FaDaAd.exe'
   !define ReadmeFile       'ReadMe.Txt'
   !define EulaFile         'Eula.rtf'
 
@@ -53,7 +53,7 @@
   ;Install Pages
   !insertmacro MUI_PAGE_WELCOME
     !define MUI_LICENSEPAGE_RADIOBUTTONS
-  !insertmacro MUI_PAGE_LICENSE .\..\${EulaFile}
+  !insertmacro MUI_PAGE_LICENSE .\..\doc\${EulaFile}
   !insertmacro MUI_PAGE_DIRECTORY
     !define MUI_STARTMENUPAGE_DEFAULTFOLDER "${Company} - ${AppName}"
     Var StartMenuFolder
@@ -106,11 +106,12 @@ Section ""
   SetOutPath $INSTDIR
 
   File ".\..\bin\Release\changelog.Txt"
-  File ".\..\bin\Release\FDA.exe"
+  File ".\..\bin\Release\FaDaAd.exe"
+  File ".\..\bin\Release\OLKI.Tools.ColorAndPicture.dll"
   File ".\..\bin\Release\OLKI.Tools.CommonTools.dll"
   File ".\..\bin\Release\OLKI.Widgets.dll"
-  File ".\..\bin\Release\${EulaFile}"
-  File ".\..\bin\Release\${ReadmeFile}"
+  File ".\..\bin\Release\doc\${EulaFile}"
+  File ".\..\bin\Release\doc\${ReadmeFile}"
   File ".\..\bin\Release\Properties\Resources\Icons\1380_wall_clockFINAL.ico"
 
   SetOutPath "$INSTDIR\Licenses"
@@ -118,13 +119,13 @@ Section ""
   File ".\..\bin\Release\licenses\COPL-License.Txt"
 
   ;Create Desktop shortcut
-  CreateShortCut "$DESKTOP\${AppName}.lnk" "$INSTDIR\FDA.exe" ""
+  CreateShortCut "$DESKTOP\${AppName}.lnk" "$INSTDIR\FaDaAd.exe" ""
   
   ;Create Starmenue Entry
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     ;Create shortcuts
     CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\FDA.lnk" "$INSTDIR\FDA.exe"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\FaDaAd.lnk" "$INSTDIR\FaDaAd.exe"
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Readme.lnk" "$INSTDIR\${ReadmeFile}"
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\EULA.lnk" "$INSTDIR\${EulaFile}"

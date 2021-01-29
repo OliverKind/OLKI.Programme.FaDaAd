@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OLKI.Programme.FDA.src {
+namespace OLKI.Programme.FaDaAd.Properties {
     using System;
     
     
@@ -19,17 +19,17 @@ namespace OLKI.Programme.FDA.src {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class resMainForm {
+    internal class Stringtable {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal resMainForm() {
+        internal Stringtable() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace OLKI.Programme.FDA.src {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OLKI.Programme.FDA.src.resMainForm", typeof(resMainForm).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OLKI.Programme.FaDaAd.Properties.Stringtable", typeof(Stringtable).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace OLKI.Programme.FDA.src {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Stapelverarbeitung ähnelt.
         /// </summary>
-        internal static string btnBatchStart_Click_Exception_Caption {
+        internal static string _0x0001c {
             get {
-                return ResourceManager.GetString("btnBatchStart_Click_Exception_Caption", resourceCulture);
+                return ResourceManager.GetString("0x0001c", resourceCulture);
             }
         }
         
@@ -75,45 +75,45 @@ namespace OLKI.Programme.FDA.src {
         ///Fehler:
         ///{0} ähnelt.
         /// </summary>
-        internal static string btnBatchStart_Click_Exception_Message {
+        internal static string _0x0001m {
             get {
-                return ResourceManager.GetString("btnBatchStart_Click_Exception_Message", resourceCulture);
+                return ResourceManager.GetString("0x0001m", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Ausführung als Administrator ähnelt.
         /// </summary>
-        internal static string btnCheckForAdminRights_Click__IsAdmin_Caption {
+        internal static string _0x0002c {
             get {
-                return ResourceManager.GetString("btnCheckForAdminRights_Click__IsAdmin_Caption", resourceCulture);
+                return ResourceManager.GetString("0x0002c", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Sie führen dieses Programm als Administrator aus. ähnelt.
         /// </summary>
-        internal static string btnCheckForAdminRights_Click__IsAdmin_Message {
+        internal static string _0x0002m {
             get {
-                return ResourceManager.GetString("btnCheckForAdminRights_Click__IsAdmin_Message", resourceCulture);
+                return ResourceManager.GetString("0x0002m", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Bitte als Administrator auführen ähnelt.
         /// </summary>
-        internal static string btnCheckForAdminRights_Click__IsNotAdmin_Caption {
+        internal static string _0x0003c {
             get {
-                return ResourceManager.GetString("btnCheckForAdminRights_Click__IsNotAdmin_Caption", resourceCulture);
+                return ResourceManager.GetString("0x0003c", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Sie sollten die Anwendung als Administrator ausführen um Fehler aufgrund verweigerter Zugriffsrechte zu vermeiden. ähnelt.
         /// </summary>
-        internal static string btnCheckForAdminRights_Click__IsNotAdmin_Message {
+        internal static string _0x0003m {
             get {
-                return ResourceManager.GetString("btnCheckForAdminRights_Click__IsNotAdmin_Message", resourceCulture);
+                return ResourceManager.GetString("0x0003m", resourceCulture);
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace OLKI.Programme.FDA
+﻿namespace OLKI.Programme.FaDaAd.src
 {
     partial class AboutForm
     {

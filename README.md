@@ -1,4 +1,4 @@
-# OLKI.Programme.FDA
+# OLKI.Programme.FaDaAd
 
 This program is used to quickly correct timestamps of files.
 
@@ -8,9 +8,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* .NET Framework 4 or higher
+* .NET Framework 4.7.2 or higher
 
 > To compile the source code you need also the following repositories
+> * [OLKI.Tools.ColorAndPicture](https://github.com/OliverKind/OLKI.Tools.ColorAndPicture)
 > * [OLKI.Tools.CommonTools](https://github.com/OliverKind/OLKI.Tools.CommonTools)
 > * [OLKI.Widgets](https://github.com/OliverKind/OLKI.Widgets)
 
@@ -18,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 You can download the source code or use a installer of the last release, if you only want to run the application. The inital autor will provide binaris of this work irregular at his homepage.
 
-> Download source code on [GitHub](https://github.com/OliverKind/OLKI.Programme.FDA/archive/master.zip)
+> Download source code on [GitHub](https://github.com/OliverKind/OLKI.Programme.FaDaAd/archive/master.zip)
 > You also need to download the additional required repositories.
 
 > Download setup binary by inital autor [Oliver Kind](https://oliver-kind.de/index.php?NId=33)
@@ -37,7 +38,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on my code of conduct
 
 ## Versioning
 
-For the versions available, see the [tags on this repository](https://github.com/OliverKind/OLKI.Programme.FDA/tags). 
+For the versions available, see the [tags on this repository](https://github.com/OliverKind/OLKI.Programme.FaDaAd/tags). 
 
 Versionnumber: a.b.c.d 
 
@@ -53,7 +54,7 @@ d = build number
 
 * **Oliver Kind** - *Initial work* - [GitHub](https://github.com/OliverKind), [Homepage](https://oliver-kind.de/)
 
-See also the list of [contributors](https://github.com/OliverKind/OLKI.Programme.FDA/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/OliverKind/OLKI.Programme.FaDaAd/contributors) who participated in this project.
 
 ## License
 

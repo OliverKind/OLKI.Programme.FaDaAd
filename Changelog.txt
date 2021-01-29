@@ -12,6 +12,11 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - N/A
 
+## [1.0.2.3] - 2021-01-30
+### Changed
+- Framework to .NET-Framework 4.7.2
+- Change name to FaDaAd
+
 ## [1.0.1.2] - 2019-10-16
 ### Fixed
 - Wrong text at LGPL-Licence file

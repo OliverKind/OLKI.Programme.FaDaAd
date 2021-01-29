@@ -1,4 +1,4 @@
-﻿namespace OLKI.Programme.FDA
+﻿namespace OLKI.Programme.FaDaAd.src
 {
     partial class MainForm
     {
@@ -376,7 +376,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Text = "FDA - Fast Date Adjustment";
+            this.Text = "FaDaAd - Fast Date Adjustment";
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.grbExplorer.ResumeLayout(false);
             this.tabMode.ResumeLayout(false);

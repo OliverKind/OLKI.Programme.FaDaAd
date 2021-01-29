@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("FDA - FastDateAdjust")]
+[assembly: AssemblyTitle("FaDaAd - FastDateAdjust")]
 [assembly: AssemblyDescription("Ein Programm um falsche Zeitstempel von Dateien zu korrigieren")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("OLKI-Software")]
-[assembly: AssemblyProduct("FDA")]
-[assembly: AssemblyCopyright("Copyright ©  2018 - Oliver Kind")]
+[assembly: AssemblyProduct("FaDaAd")]
+[assembly: AssemblyCopyright("Copyright ©  2021 - Oliver Kind")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.2")]
-[assembly: AssemblyFileVersion("1.0.1.2")]
+[assembly: AssemblyVersion("1.0.2.3")]
+[assembly: AssemblyFileVersion("1.0.2.3")]

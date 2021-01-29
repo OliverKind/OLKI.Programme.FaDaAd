@@ -1,42 +1,38 @@
 ﻿/*
- * Filename:      frmMainForm.cs
- * Created:       2018-12-24
- * Last modified: 2018-12-24
- * Copyright:     Oliver Kind - 2018
+ * FaDaAd - FastDateAdjust
  * 
- * File Content:
- * - Fields
- * - Methodes
- *  1. MainForm - Constructor
- *  2. RefreshLine
- *  3. SetExifData_CreationTime
- *  4. SetPictureBoxImage
- *  5. Form User Events
- *   ...
+ * Copyright:   Oliver Kind - 2021
+ * License:     LGPL
  * 
  * Desctiption:
  * The MainForm of the application
  * 
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the LGPL General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * LGPL General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not check the GitHub-Repository.
+ * 
  * */
 
+using OLKI.Programme.FaDaAd.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Media;
-using System.Reflection;
 using System.Resources;
 using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
-using System.Windows.Media.Imaging;
-using OLKI.Programme.FDA.src;
 
-namespace OLKI.Programme.FDA
+namespace OLKI.Programme.FaDaAd.src
 {
     /// <summary>
     /// The MainForm of the application
@@ -47,16 +43,7 @@ namespace OLKI.Programme.FDA
         /// <summary>
         /// Seperator behind original filname and random extension, to make a temporary copy of a file during changing date in exif data
         /// </summary>
-        private const string TEMP_FILE_SEPERATOR = "__FDA__";
-        #endregion
-
-        #region Members
-        /// <summary>
-        /// Use to access resource file
-        /// </summary>
-        //private static System.ComponentModel.ComponentResourceManager _resource = new System.ComponentModel.ComponentResourceManager(frmMainForm_E);
-        //private ResourceManager _rm = new ResourceManager("resMainForm.resx", Assembly.GetExecutingAssembly());
-        private ResXResourceReader _rm = new ResXResourceReader(@"C:\Resource1.resx");
+        private const string TEMP_FILE_SEPERATOR = "__FaDaAd__";
         #endregion
 
         #region Methodes
@@ -68,7 +55,7 @@ namespace OLKI.Programme.FDA
             InitializeComponent();
             this.cboBase.SelectedIndex = 0;
             this.dtpReference_ValueChanged__dtpCorrect_ValueChanged(this, new EventArgs());
-            this.chkCheckForAdminRightsOnStartup.Checked = OLKI.Programme.FDA.Properties.Settings.Default.CheckForAdminRights;
+            this.chkCheckForAdminRightsOnStartup.Checked = Properties.Settings.Default.CheckForAdminRights;
         }
 
         /// <summary>
@@ -85,7 +72,7 @@ namespace OLKI.Programme.FDA
             this.slvItems.Items[index].SubItems[2].Text = FileInfo.LastWriteTime.ToString();
             this.slvItems.Items[index].SubItems[2].Tag = FileInfo.LastWriteTime.ToString();
 
-            this.slvItems.Items[index].SubItems[4].Text = OLKI.Tools.CommonTools.DirectoryAndFile.FileSize.Convert(FileInfo.Length);
+            this.slvItems.Items[index].SubItems[4].Text = Tools.CommonTools.DirectoryAndFile.FileSize.Convert(FileInfo.Length);
             this.slvItems.Items[index].SubItems[4].Tag = FileInfo.Length;
         }
 
@@ -113,7 +100,7 @@ namespace OLKI.Programme.FDA
             Encoding Encoding = Encoding.UTF8;
             //Create Temp File to read Data
             string TempFile = path + TEMP_FILE_SEPERATOR + Path.GetRandomFileName();
-            OLKI.Tools.CommonTools.DirectoryAndFile.File.Copy(path, TempFile);
+            Tools.CommonTools.DirectoryAndFile.File.Copy(path, TempFile);
 
             Image theImage = new Bitmap(1, 1);
             try
@@ -127,14 +114,13 @@ namespace OLKI.Programme.FDA
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.Print(ex.Message);
-                //OLKI.Tools.CommonTools.DirectoryAndFile.File_Delete(TempFile, false);
                 return false;
             }
             finally
             {
                 theImage.Dispose();
 
-                OLKI.Tools.CommonTools.DirectoryAndFile.File.Delete(TempFile, false);
+                Tools.CommonTools.DirectoryAndFile.File.Delete(TempFile, false);
             }
             return true;
         }
@@ -177,7 +163,7 @@ namespace OLKI.Programme.FDA
         #region Form Events
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            if (OLKI.Programme.FDA.Properties.Settings.Default.CheckForAdminRights)
+            if (Properties.Settings.Default.CheckForAdminRights)
             {
                 this.btnCheckForAdminRights_Click(sender, e, false);
             }
@@ -227,16 +213,17 @@ namespace OLKI.Programme.FDA
         {
             this.btnCheckForAdminRights_Click(sender, e, true);
         }
+
         private void btnCheckForAdminRights_Click(object sender, EventArgs e, bool showMessageIfAdmin)
         {
             // Check for Admin Rights
             if (!new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator))
             {
-                MessageBox.Show(resMainForm.btnCheckForAdminRights_Click__IsNotAdmin_Message, resMainForm.btnCheckForAdminRights_Click__IsNotAdmin_Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Stringtable._0x0003m, Stringtable._0x0003c, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (showMessageIfAdmin)
             {
-                MessageBox.Show(resMainForm.btnCheckForAdminRights_Click__IsAdmin_Message, resMainForm.btnCheckForAdminRights_Click__IsAdmin_Caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Stringtable._0x0002m, Stringtable._0x0002c, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -259,7 +246,7 @@ namespace OLKI.Programme.FDA
                 this.slvItems.Refresh();
                 this.picPreview.Refresh();
 
-                /*Batch process*/
+                // Batch process
                 for (int i = 0; i < this.slvItems.Items.Count; i++)
                 {
                     FileInfo FileInfoC = ((FileInfo)slvItems.Items[i].Tag);
@@ -306,7 +293,7 @@ namespace OLKI.Programme.FDA
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(resMainForm.btnBatchStart_Click_Exception_Message, new object[] { ex.Message }), resMainForm.btnBatchStart_Click_Exception_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(Stringtable._0x0001m, new object[] { ex.Message }), Stringtable._0x0001c, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -341,8 +328,8 @@ namespace OLKI.Programme.FDA
 
         private void chkCheckForAdminRightsOnStartup_CheckedChanged(object sender, EventArgs e)
         {
-            OLKI.Programme.FDA.Properties.Settings.Default.CheckForAdminRights = this.chkCheckForAdminRightsOnStartup.Checked;
-            OLKI.Programme.FDA.Properties.Settings.Default.Save();
+            Properties.Settings.Default.CheckForAdminRights = this.chkCheckForAdminRightsOnStartup.Checked;
+            Properties.Settings.Default.Save();
         }
 
         private void dtpReference_ValueChanged__dtpCorrect_ValueChanged(object sender, EventArgs e)
