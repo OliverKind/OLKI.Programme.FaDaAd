@@ -100,7 +100,9 @@
     </Compile>
     <None Include="app.config" />
     <None Include="CONTRIBUTING.md" />
-    <None Include="doc\Eula.rtf" />
+    <None Include="doc\Information.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="LICENSE" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

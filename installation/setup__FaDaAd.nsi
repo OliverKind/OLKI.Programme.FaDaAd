@@ -27,7 +27,8 @@
   !define Copyright        '2018 - Oliver Kind'
   !define FinishFile       'FaDaAd.exe'
   !define ReadmeFile       'ReadMe.Txt'
-  !define EulaFile         'Eula.rtf'
+  !define EulaFile         'LGPL-License.txt'
+  !define InformationFile  'Information.rtf'
 
 ;--------------------------------
 ;General
@@ -53,9 +54,11 @@
   ;Install Pages
   !insertmacro MUI_PAGE_WELCOME
     !define MUI_LICENSEPAGE_RADIOBUTTONS
-  !insertmacro MUI_PAGE_LICENSE .\..\doc\${EulaFile}
+  !insertmacro MUI_PAGE_LICENSE .\..\bin\Release\licenses\${EulaFile}
+    !define MUI_PAGE_HEADER_TEXT "Installationshinweise"
+    !define MUI_PAGE_HEADER_SUBTEXT "Bitte lesen Sie die Hinweise zur Installation der Software"
+  !insertmacro MUI_PAGE_LICENSE .\..\doc\${InformationFile}
   !insertmacro MUI_PAGE_DIRECTORY
-    !define MUI_STARTMENUPAGE_DEFAULTFOLDER "${Company} - ${AppName}"
     Var StartMenuFolder
   !insertmacro MUI_PAGE_STARTMENU  "Application" $StartMenuFolder
   !insertmacro MUI_PAGE_INSTFILES
@@ -108,7 +111,7 @@ Section ""
   File ".\..\bin\Release\changelog.Txt"
   File ".\..\bin\Release\FaDaAd.exe"
   File ".\..\bin\Release\OLKI.Toolbox.dll"
-  File ".\..\bin\Release\doc\${EulaFile}"
+  File ".\..\bin\Release\doc\${InformationFile}"
   File ".\..\bin\Release\doc\${ReadmeFile}"
   File ".\..\bin\Release\Properties\Resources\Icons\1380_wall_clockFINAL.ico"
 
@@ -127,6 +130,7 @@ Section ""
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Readme.lnk" "$INSTDIR\${ReadmeFile}"
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\EULA.lnk" "$INSTDIR\${EulaFile}"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Installationshinweise.lnk" "$INSTDIR\${InformationFile}"
   !insertmacro MUI_STARTMENU_WRITE_END
 
   ;Store installation folder for overwriting with a newer version
