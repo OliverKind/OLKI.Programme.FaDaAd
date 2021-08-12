@@ -136,7 +136,7 @@ namespace OLKI.Programme.FaDaAd.src
 
         private void BtnGoToLicenses_Click(object sender, EventArgs e)
         {
-            Tools.CommonTools.DirectoryAndFile.Directory.Open(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Licenses\", false);
+            Toolbox.DirectoryAndFile.Directory.Open(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Licenses\", false);
         }
         #endregion
     }

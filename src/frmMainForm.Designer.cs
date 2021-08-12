@@ -32,7 +32,7 @@
             this.grbExplorer = new System.Windows.Forms.GroupBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.slvItems = new OLKI.Widgets.SortListView();
+            this.slvItems = new OLKI.Toolbox.Widgets.SortListView();
             this.Dateiname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -54,7 +54,7 @@
             this.lblReference = new System.Windows.Forms.Label();
             this.dtpReference = new System.Windows.Forms.DateTimePicker();
             this.tabpSingleMode = new System.Windows.Forms.TabPage();
-            this.prgSingleMode = new OLKI.Widgets.ReadOnlyPropertyGrid();
+            this.prgSingleMode = new OLKI.Toolbox.Widgets.ReadOnlyPropertyGrid();
             this.picPreview = new System.Windows.Forms.PictureBox();
             this.btnAbout = new System.Windows.Forms.Button();
             this.chkCheckForAdminRightsOnStartup = new System.Windows.Forms.CheckBox();
@@ -399,9 +399,9 @@
         private System.Windows.Forms.TabPage tabpBatchMode;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBrowse;
-        private OLKI.Widgets.SortListView slvItems;
+        private OLKI.Toolbox.Widgets.SortListView slvItems;
         private System.Windows.Forms.PictureBox picPreview;
-        private OLKI.Widgets.ReadOnlyPropertyGrid prgSingleMode;
+        private OLKI.Toolbox.Widgets.ReadOnlyPropertyGrid prgSingleMode;
         private System.Windows.Forms.ColumnHeader Dateiname;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

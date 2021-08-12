@@ -72,7 +72,7 @@ namespace OLKI.Programme.FaDaAd.src
             this.slvItems.Items[index].SubItems[2].Text = FileInfo.LastWriteTime.ToString();
             this.slvItems.Items[index].SubItems[2].Tag = FileInfo.LastWriteTime.ToString();
 
-            this.slvItems.Items[index].SubItems[4].Text = Tools.CommonTools.DirectoryAndFile.FileSize.Convert(FileInfo.Length);
+            this.slvItems.Items[index].SubItems[4].Text = Toolbox.DirectoryAndFile.FileSize.Convert(FileInfo.Length);
             this.slvItems.Items[index].SubItems[4].Tag = FileInfo.Length;
         }
 
@@ -100,7 +100,7 @@ namespace OLKI.Programme.FaDaAd.src
             Encoding Encoding = Encoding.UTF8;
             //Create Temp File to read Data
             string TempFile = path + TEMP_FILE_SEPERATOR + Path.GetRandomFileName();
-            Tools.CommonTools.DirectoryAndFile.File.Copy(path, TempFile);
+            Toolbox.DirectoryAndFile.File.Copy(path, TempFile);
 
             Image theImage = new Bitmap(1, 1);
             try
@@ -120,7 +120,7 @@ namespace OLKI.Programme.FaDaAd.src
             {
                 theImage.Dispose();
 
-                Tools.CommonTools.DirectoryAndFile.File.Delete(TempFile, false);
+                Toolbox.DirectoryAndFile.File.Delete(TempFile, false);
             }
             return true;
         }
@@ -199,7 +199,7 @@ namespace OLKI.Programme.FaDaAd.src
                     NewItem.SubItems.Add(FileInfo.LastWriteTime.ToString());
                     NewItem.SubItems[2].Tag = FileInfo.LastWriteTime;
                     NewItem.SubItems.Add(FileInfo.Extension + "-Datei");
-                    NewItem.SubItems.Add(OLKI.Tools.CommonTools.DirectoryAndFile.FileSize.Convert(FileInfo.Length));
+                    NewItem.SubItems.Add(OLKI.Toolbox.DirectoryAndFile.FileSize.Convert(FileInfo.Length));
                     NewItem.SubItems[4].Tag = FileInfo.Length;
                     NewItem.Tag = FileInfo;
                     NewItem.Text = FileInfo.Name;
